@@ -2,6 +2,20 @@
 
 Um jogo interativo baseado no clássico Jogo da Forca, onde o jogador tenta adivinhar a palavra antes de esgotar suas tentativas.
 
+## Vídeo demonstrativo
+
+https://github.com/user-attachments/assets/fb53a7de-2567-4f26-afc9-119f66b462c5
+
+## Print das Telas
+
+- Modo Claro
+
+![modo claro](https://github.com/user-attachments/assets/b99445f1-8411-46fb-80ec-ae350cc4f20e)
+
+- Modo Escuro
+
+![modo escuro](https://github.com/user-attachments/assets/95ac5100-190c-4c5d-a423-4b96a0a4b746)
+
 ## 🌟 Descrição
 O Jogo da Forca é uma aplicação web que permite aos usuários:
 
