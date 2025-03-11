@@ -1,0 +1,12 @@
+ctrl + shift + k => abre o prompt do chat
+
+ctrl + i => direciona o chat para a direita do IDE
+
+chat => usar para fazer perguntas a IA
+
+Composer => é um agente mais eficaz, ele pode mexer no projeto, modificar arquivos, etc.
+
+site do cursor => docs.cursor.com/composer/overview
+
+checkpoints => retorna a qualquer momento em caso de modificações no codigo.
+

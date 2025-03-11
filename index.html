@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path stroke='black' stroke-width='4' fill='none' d='M10 90h80M30 90V10M30 10h50M80 10v20'/><circle cx='80' cy='40' r='10' stroke='black' stroke-width='4' fill='none'/><path stroke-width='4' fill='none' d='M80 50v30M80 60l-15 15M80 60l15 15'/></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Jogo da Forca</h1>
+        <div class="theme-controls">
+          <button class="theme-button">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div class="hangman">
+          <svg height="250" width="200" class="hangman-draw">
+            <!-- Base -->
+            <line
+              x1="50"
+              y1="240"
+              x2="150"
+              y2="240"
+              class="hangman-piece base"
+            ></line>
+            <!-- Poste vertical -->
+            <line
+              x1="100"
+              y1="240"
+              x2="100"
+              y2="40"
+              class="hangman-piece base"
+            ></line>
+            <!-- Topo -->
+            <line
+              x1="100"
+              y1="40"
+              x2="150"
+              y2="40"
+              class="hangman-piece base"
+            ></line>
+            <!-- Corda -->
+            <line
+              x1="150"
+              y1="40"
+              x2="150"
+              y2="80"
+              class="hangman-piece base"
+            ></line>
+            <!-- Cabeça -->
+            <circle
+              cx="150"
+              cy="100"
+              r="20"
+              class="hangman-piece hidden body-part"
+            ></circle>
+            <!-- Corpo -->
+            <line
+              x1="150"
+              y1="120"
+              x2="150"
+              y2="170"
+              class="hangman-piece hidden body-part"
+            ></line>
+            <!-- Braço esquerdo -->
+            <line
+              x1="150"
+              y1="140"
+              x2="120"
+              y2="160"
+              class="hangman-piece hidden body-part"
+            ></line>
+            <!-- Braço direito -->
+            <line
+              x1="150"
+              y1="140"
+              x2="180"
+              y2="160"
+              class="hangman-piece hidden body-part"
+            ></line>
+            <!-- Perna esquerda -->
+            <line
+              x1="150"
+              y1="170"
+              x2="120"
+              y2="200"
+              class="hangman-piece hidden body-part"
+            ></line>
+            <!-- Perna direita -->
+            <line
+              x1="150"
+              y1="170"
+              x2="180"
+              y2="200"
+              class="hangman-piece hidden body-part"
+            ></line>
+          </svg>
+        </div>
+
+        <div class="game-info">
+          <div class="word-display"></div>
+          <p class="hint">Dica: <span></span></p>
+          <p class="guesses">Letras erradas: <span></span></p>
+          <p class="remaining">Tentativas restantes: <span>6</span></p>
+        </div>
+      </div>
+
+      <div class="keyboard"></div>
+
+      <div class="game-modal">
+        <div class="modal-content">
+          <h2 class="modal-title"></h2>
+          <p class="modal-word"></p>
+          <button class="play-again">Jogar Novamente</button>
+        </div>
+      </div>
+
+      <div class="sound-controls">
+        <button class="mute-button">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="volume-control">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="volume-slider"
+          />
+        </div>
+      </div>
+
+      <div class="exit-button-container">
+        <button class="exit-button">
+          <i class="fas fa-sign-out-alt"></i>
+          Sair do Jogo
+        </button>
+      </div>
+    </div>
+
+    <audio id="keySound" preload="auto">
+      <source src="sounds/key-press-263640.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="winSound" preload="auto">
+      <source src="sounds/winfantasia-6912.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="loseSound" preload="auto">
+      <source src="sounds/negative_beeps-6008.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
